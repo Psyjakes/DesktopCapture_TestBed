@@ -1,0 +1,8 @@
+<div>
+  <div fxLayout fxLayoutGap="8px">
+    <button (click)="tryCapture()">Try Capture</button>
+    <button (click)="toggleMute()" [disabled]="!videoLoaded">Toggle Sound</button>
+  </div>
+  <video *ngIf="!hasError" id="video"></video>
+  <span *ngIf="hasError" style="font-size: large; color: red;">Error: {{errorMessage}}</span>
+</div>
